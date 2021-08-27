@@ -33,8 +33,7 @@ LOCAL_SRC_FILES:= \
         bass_boost.c \
         virtualizer.c \
         reverb.c \
-        effect_api.c \
-        effect_util.c
+        effect_api.c
 
 # HW_ACCELERATED has been disabled by default since msm8996. File doesn't
 # compile cleanly on tip so don't want to include it, but keeping this
@@ -59,6 +58,7 @@ LOCAL_CFLAGS+= -O2 -fvisibility=hidden
 
 ifneq ($(strip $(AUDIO_FEATURE_DISABLED_DTS_EAGLE)),true)
     LOCAL_CFLAGS += -DDTS_EAGLE
+    LOCAL_SRC_FILES += effect_util.c
 endif
 
 LOCAL_HEADER_LIBRARIES := libhardware_headers \

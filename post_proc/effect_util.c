@@ -51,7 +51,6 @@ static const char *paramList[10] = {
 #define EFFECT_FILE "/data/misc/dts/effect"
 #define MAX_LENGTH_OF_INTEGER_IN_STRING 13
 
-#ifdef DTS_EAGLE
 void create_effect_state_node(int device_id)
 {
     char prop[PROPERTY_VALUE_MAX];
@@ -211,4 +210,3 @@ void remove_effect_state_node(int device_id)
         }
     }
 }
-#endif
